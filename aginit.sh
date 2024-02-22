@@ -8,3 +8,4 @@ sudo apt -y install curl whois bind9-host mtr-tiny jq ipcalc grepcidr nmap ncat 
 sudo apt install nmap
 sudo apt install speedtest-cli
 sudo apt install neofetch
+sudo apt install cmatrix
