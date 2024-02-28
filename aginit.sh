@@ -84,6 +84,14 @@ else
     sudo apt -y install cmatrix
 fi
 
+FILE=/usr/bin/dig
+if [ -f "$FILE" ]; then
+    echo "$FILE exists." | tee -a output.txt
+else 
+    echo "$FILE does not exist." | tee -a output.txt
+    sudo apt -y install dig
+fi
+
 
 sudo apt -y install curl bind9-host mtr-tiny jq grepcidr ncat aha
 
