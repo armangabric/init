@@ -1,6 +1,6 @@
 sudo apt-get update && sudo apt-get upgrade
 sudo apt -y install net-tools
-#not one binary - multipl tools - check for actual binaries first then add the file checks
+#not one binary - multiple tools - check for actual binaries first then add the file checks
 
 FILE=/usr/bin/ipcalc
 if [ -f "$FILE" ]; then 
@@ -9,8 +9,6 @@ else
     echo "$FILE does not exist." | tee -a output.txt
     sudo apt -y install ipcalc
 fi
-
-
 
 FILE=/usr/bin/zsh
 if [ -f "$FILE" ]; then 
@@ -92,6 +90,13 @@ else
     sudo apt -y install dig
 fi
 
+FILE=/usr/bin/htop
+if [ -f "$FILE" ]; then
+    echo "$FILE exists." | tee -a output.txt
+else 
+    echo "$FILE does not exist." | tee -a output.txt
+    sudo apt -y install htop
+fi
 
 sudo apt -y install curl bind9-host mtr-tiny jq grepcidr ncat aha
 
