@@ -100,3 +100,5 @@ fi
 
 sudo apt -y install curl bind9-host mtr-tiny jq grepcidr ncat aha
 
+echo "Now we will try to install tabby.sh this was not tested but here we go!"
+curl -s https://packagecloud.io/install/repositories/eugeny/tabby/script.deb.sh | sudo bash
