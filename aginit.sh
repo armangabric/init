@@ -64,13 +64,14 @@ else
 fi
 
 
-FILE=/usr/bin/neofetch
-if [ -f "$FILE" ]; then
-    echo "$FILE exists." | tee -a output.txt
-else 
-    echo "$FILE does not exist." | tee -a output.txt
-    sudo apt -y install neofetch
-fi
+#FILE=/usr/bin/fastfetch
+#if [ -f "$FILE" ]; then
+#    echo "$FILE exists." | tee -a output.txt
+#else 
+#    echo "$FILE does not exist." | tee -a output.txt
+#    sudo apt -y install fastfetch
+#fi
+#fastfetch is a PIA for debian at this time - gotta figure this out. too lazy atm.
 
 
 FILE=/usr/bin/cmatrix
