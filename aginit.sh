@@ -98,8 +98,23 @@ else
     sudo apt -y install htop
 fi
 
+FILE=/usr/bin/iftop
+if [ -f "$FILE" ]; then
+    echo "$FILE exists." | tee -a output.txt
+else 
+    echo "$FILE does not exist." | tee -a output.txt
+    sudo apt -y install iftop
+fi
+
+
 sudo apt -y install curl bind9-host mtr-tiny jq grepcidr ncat aha
 sudo apt -y install net-tools
 
 #echo "Now we will try to install tabby.sh this was not tested but here we go!"
 curl -s https://packagecloud.io/install/repositories/eugeny/tabby/script.deb.sh | sudo bash
+
+#nordvpn install script from their site
+sh <(curl -sSf https://downloads.nordcdn.com/apps/linux/install.sh)
+
+#azure cli
+curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
