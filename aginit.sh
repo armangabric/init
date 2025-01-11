@@ -73,17 +73,6 @@ else
     sudo apt -y install speedtest-cli
 fi
 
-
-#FILE=/usr/bin/fastfetch
-#if [ -f "$FILE" ]; then
-#    echo "$FILE exists." | tee -a output.txt
-#else 
-#    echo "$FILE does not exist." | tee -a output.txt
-#    sudo apt -y install fastfetch
-#fi
-#fastfetch is a PIA for debian at this time - gotta figure this out. too lazy atm.
-
-
 FILE=/usr/bin/cmatrix
 if [ -f "$FILE" ]; then
     echo "$FILE exists." | tee -a output.txt
@@ -121,10 +110,10 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 #check for actual binaries first then add the file checks
 
 #echo "Now we will try to install tabby.sh this was not tested but here we go!"
-curl -s https://packagecloud.io/install/repositories/eugeny/tabby/script.deb.sh | sudo bash
+#curl -s https://packagecloud.io/install/repositories/eugeny/tabby/script.deb.sh | sudo bash
 
 #nordvpn install script from their site
-sh <(curl -sSf https://downloads.nordcdn.com/apps/linux/install.sh)
+#sh <(curl -sSf https://downloads.nordcdn.com/apps/linux/install.sh)
 
 #azure cli
-curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+#curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
