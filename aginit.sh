@@ -106,7 +106,7 @@ else
 fi
 #need to fix this later, validation not working as expected - gona make this more simple for now. 
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+#sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 #check for actual binaries first then add the file checks
 
 #echo "Now we will try to install tabby.sh this was not tested but here we go!"
