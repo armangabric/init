@@ -7,11 +7,12 @@
 
 
 
-sudo apt-get update && sudo apt-get upgrade
-#not one binary - multiple tools - check for actual binaries first then add the file checks
+sudo apt update && sudo apt upgrade -y
+#first things first
 
 sudo apt -y install curl bind9-host mtr-tiny jq grepcidr ncat aha net-tools iftop nethogs
 #keep the tools / binaries without validation checks at the start of the script. 
+#prereqs for asn - https://github.com/nitefood/asn
 
 FILE=/usr/bin/ipcalc
 if [ -f "$FILE" ]; then 
@@ -103,6 +104,22 @@ if [ -f "$FILE" ]; then
 else 
     echo "$FILE does not exist." | tee -a output.txt
     sudo apt -y install iftop
+fi
+
+FILE=/usr/bin/btop
+if [ -f "$FILE" ]; then
+    echo "$FILE exists." | tee -a output.txt
+else 
+    echo "$FILE does not exist." | tee -a output.txt
+    sudo apt -y install btop
+fi
+
+FILE=/usr/bin/asn
+if [ -f "$FILE" ]; then
+    echo "$FILE exists." | tee -a output.txt
+else 
+    echo "$FILE does not exist." | tee -a output.txt
+    sudo apt -y install asn
 fi
 #need to fix this later, validation not working as expected - gona make this more simple for now. 
 
